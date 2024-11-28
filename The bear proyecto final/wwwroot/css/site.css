@@ -1,0 +1,243 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100vh;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2a2a2a;
+    color: white;
+}
+
+.pos-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    gap: 1px;
+    background-color: #2a2a2a;
+}
+
+/* Orders List Styles */
+.orders-list {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    background-color: #2a2a2a;
+    padding: 1rem;
+    border-right: 1px solid #3a3a3a;
+    overflow-y: auto;
+}
+
+.orders-list h2 {
+    margin-bottom: 1rem;
+}
+
+.order-item:hover {
+    cursor: pointer;
+    background-color: black;
+}
+
+.order-item-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.order-item-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #3a3a3a;
+}
+
+/* Category Tabs */
+.category-tabs {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    gap: 0.5rem;
+    background-color: #2a2a2a;
+}
+
+.tab-btn {
+    padding: 0.5rem 1rem;
+    background-color: #3a3a3a;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.tab-btn.active {
+    background-color: #4a4a4a;
+}
+
+/* Products Grid */
+.products-grid {
+    min-height: 60%;
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
+    background-color: #2a2a2a;
+    overflow-y: auto;
+}
+
+.product-item {
+    aspect-ratio: 1;
+    background-color: #3a3a3a;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: white;
+}
+
+.product-item:hover {
+    background-color: #4a4a4a;
+}
+
+/* Action Buttons */
+.action-buttons {
+    grid-column: 2;
+    grid-row: 3;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #2a2a2a;
+}
+
+.action-btn {
+    padding: 0.5rem 1rem ;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.action-btn.cancel {
+    background-color: #e74c3c;
+}
+
+.action-btn.discount {
+    background-color: #3498db;
+}
+
+.action-btn.pay {
+    background-color: #2ecc71;
+}
+
+.action-btn.send-kitchen {
+    background-color: #f39c12;
+}
+
+.action-btn.new-order {
+    background-color: #9b59b6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .orders-list {
+        grid-column: 1;
+        grid-row: 1;
+        border-right: none;
+        border-bottom: 1px solid #3a3a3a;
+    }
+
+    .category-tabs {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .products-grid {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .action-buttons {
+        grid-column: 1;
+        grid-row: 4;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+}
+
+/* Basket Section */
+/*.basket {
+    grid-column: 2;
+    grid-row: 3;
+    padding: 1rem;
+    background-color: #2a2a2a;
+    border-top: 1px solid #3a3a3a;
+    overflow-y: auto;
+}
+
+    .basket h2 {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+    }
+
+.basket-item-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+    .basket-item-list li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #3a3a3a;
+    }
+
+.basket-item {
+    flex: 1;
+}
+
+.basket-quantity {
+    margin: 0 1rem;
+}
+
+*/
+
+.remove-item {
+    background-color: #e74c3c;
+    border: none;
+    padding: 0.3rem 0.5rem;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.flex-col > * {
+    padding: 10px;
+}
+

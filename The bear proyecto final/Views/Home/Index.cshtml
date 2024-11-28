@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "POS System";
+}
+
+<div class="pos-container">
+    <!-- Orders List -->
+    <div class="orders-list">
+        <h2>Orders</h2>
+        <ul class="order-item-list" id="order-item-list"></ul>
+    </div>
+
+    <div class="flex-col">
+        <!-- Category Tabs -->
+        <div class="category-tabs">
+            <button class="tab-btn active">Dishes</button>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="products-grid"></div>
+
+        <!-- Basket Section -->
+        <div class="basket">
+            <h2>Basket</h2>
+            <ul class="basket-item-list">Empty</ul>
+            <p>Total Calories: <span id="total-calories">0</span></p>
+        </div>
+
+        <!-- Bottom Action Buttons -->
+        <div class="action-buttons">
+            <button class="action-btn cancel">Cancel Order</button>
+            <button class="action-btn discount">Apply Discount</button>
+            <button class="action-btn pay">Pay</button>
+            <button class="action-btn send-kitchen" id="send-kitchen">Send to Kitchen</button>
+            <div>
+                <input id="new-order-table-num" type="number" placeholder="Table Number" />
+                <button class="action-btn new-order" id="new-order">New Order</button>
+            </div>
+        </div>
+
+        <!-- Order Details Section -->
+        <div class="order-details">
+            <h2>Order Details</h2>
+            <p>Table: <span id="order-table">N/A</span></p>
+            <p>Server: <span id="order-server">N/A</span></p>
+            <p>Subtotal: <span id="order-subtotal">0</span></p>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/pos-system.css" />
+}
+
+ @* <script src="~/js/site.js"></script> *@
